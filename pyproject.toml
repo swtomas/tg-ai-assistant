@@ -1,0 +1,25 @@
+[project]
+name = "tg-ai-assistant"
+version = "1.0.0"
+description = "AI assistant for your telegram account"
+readme = "README.md"
+authors = [
+    { name = "swtomas", email = "tgt5220@gmail.com" }
+]
+requires-python = ">=3.15"
+dependencies = [
+    "aiogram>=3.32.0",
+    "pydantic-settings>=2.16.3",
+]
+
+[project.scripts]
+tg-ai-assistant = "tg_ai_assistant.__main__:main"
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.basedpyright]
+reportUnusedCallResult = "none"
+reportOptionalMemberAccess = "none"
+reportMissingTypeStubs = "none"
