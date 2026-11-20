@@ -7,10 +7,10 @@ class Settings(BaseSettings):
     BOT_TOKEN: str
     ADMIN: int
 
-    model_config = SettingsConfigDict(env_file='src/tg_ai_assistant/files/.env', env_file_encoding='utf-8', extra='ignore')
+    model_config = SettingsConfigDict(env_file='files/.env', env_file_encoding='utf-8')
 
 
-config = Settings(**{}) #type: ignore
+config = Settings(**{})
 
 bot = Bot(token=config.BOT_TOKEN,
           default=DefaultBotProperties(
